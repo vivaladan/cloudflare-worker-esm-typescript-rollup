@@ -1,0 +1,19 @@
+name = "worker"
+type = "javascript"
+
+account_id = ""
+workers_dev = true
+route = ""
+zone_id = ""
+compatibility_date = "2021-12-21"
+
+[vars]
+TEST_VALUE = "foobar"
+
+[build]
+command = "npm install && npm run build"
+
+[build.upload]
+format = "modules"
+dir = "./dist"
+main = "./worker.mjs"
